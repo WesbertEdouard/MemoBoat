@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Student Access Page</title>
+    
+
+        <!-- Bootstrap CSS StyleSheets -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      
+        <!-- Bootstrap JavaScript and JQuery Scripts -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles.css">
+        <script src="jquery-3.5.1.min.js"></script>
+        <script type='text/javascript' src='knockout-3.5.1.js'></script>
+        <script type="text/javascript">
+
+            $(document).ready(function() {
+
+            var MemoBoatReport = function() {
+                var self = this;
+                self.MemoBoatId = ko.observable("");
+                self.FirstName = ko.observable("");
+                self.LastName = ko.observable("");
+                self.Role = ko.observable("");
+                self.Date = ko.observable("");
+                self.Report = ko.observable("");
+                self.SuccessMessage = ko.observable("")
+
+                self.AddReport = function () {
+
+                    var ReportDetails = {
+                        MemoBoatId: self.MemoBoatId(),
+                        FirstName: self.FirstName(),
+                        LastName: self.LastName(),
+                        Role: self.Role(),
+                        Date: self.Date(),
+                        Report: self.Report()
+                    }
+
+                    $.ajax({
+                        url: ' https://qp0kmdsj17.execute-api.us-east-1.amazonaws.com/launch/addreport',
+                        cache: false,
+                        type: 'POST',
+                        contentType: 'application/json; charset-utf-8',
+                        data: ko.toJSON(ReportDetails),
+                        success: function (data) {
+                        self.SuccessMessage(data)
+                            self.MemoBoatId('');
+                            self.FirstName('');
+                            self.LastName('');
+                            self.Role('');
+                            self.Date('');
+                            self.Report('');
+                        }
+                    }).fail(
+                        function (xhr, textStatus, err) {
+                            alert("Error happened "+err);
+                        });
+
+                    };
+                }
+
+                var report = new MemoBoatReport();
+                ko.applyBindings(report);
+            });
+        </script>
+</head>
+
+<body class="outer_window">
+  <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
+            <div class="nav_top">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+              <a class="nav-home" href="index.html">Memo Boat</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="student.html">Student</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="admin.html">Professor</a>
+                  </li>
+                </ul>
+                <div class="navbar-navbtn">
+                <a class="acc btn btn-light" href="https://www.memoboat.tk/index.html">Log-out</a>
+               </div>
+              </div>
+            </nav>
+          </div>
+<div class="center_Window">
+  <section id="title">
+    <div class="container-fluid">
+      
+      <!-- Title -->
+      <div class="row">
+
+        <div class="col-lg-6 col-md-12 col-sm-4">
+          <h2 style="color: white; font-weight: bold; padding: 5% 5%; font-size: 2.5rem; line-height: 1.5;">Student Access Page</h3>                
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 ml-auto">
+          
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<!--Test july 1 -->
+
+
+
+
+
+
+
+     <!-- This is only for testing 6/27/2020  -->       
+<h1>Submit your Reports!!</h1>
+<div id="student">
+    
+</div>
+   
+  <div class="container">
+    <div class="table-responsive">
+      <table class="table">
+        <tbody>
+          
+        <tr>
+          <td class="text-left"><label>MemoBoatId</label><br><input data-bind="value: MemoBoatId"/>
+            <span style='color: rgb(0, 255, 0); font-weight: bold;' data-bind='text : SuccessMessage'></span></td>
+        </tr>
+
+        <tr>
+          <td class="text-left"><label>FirstName</label><br><input data-bind="value: FirstName"/>
+            <span style='color: rgb(0, 255, 0); font-weight: bold;' data-bind='text : SuccessMessage'></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="text-left"><label>LastName</label><br><input data-bind="value: LastName"/>
+            <span style='color: rgb(0, 255, 0); font-weight: bold;' data-bind='text : SuccessMessage'></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-left"><label>Role</label><br><input data-bind="value: Role"/>
+            <span style='color: rgb(0, 255, 0); font-weight: bold;' data-bind='text : SuccessMessage'></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="text-left"><label>Date</label><br><input data-bind="value: Date"/>
+            <span style='color: rgb(0, 255, 0); font-weight: bold;' data-bind='text : SuccessMessage'></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="text-left"><label>Report</label><br><textarea data-bind="value: Report" rows="4" cols="50"></textarea>
+          <br>
+            <span style='color: rgb(0, 255, 0); font-weight: bold;' data-bind='text : SuccessMessage'></span>
+          </td>
+        </tr>
+
+    </tr>
+  
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <button data-bind="click: $root.AddReport">Add Report</button>
+    </div>
+  </div>
+</div>
+    
+    
+
+        
+    <footer id="footer">
+            
+
+            <i class="fab fa-twitter fa-2x"></i>
+            <i class="fab fa-facebook fa-2x"></i>
+            <i class="fab fa-instagram fa-2x"></i>
+            <i class="fas fa-envelope fa-2x"></i>
+            <p class="copyright">© Copyright 2020 Memo-Boat</p>
+  </footer>
+
+</div>
+</body>
+
+</html>

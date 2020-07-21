@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Memo-Boat</title>
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Local JavaScript  -->
+
+  <!-- Bootstrap CSS StyleSheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Bootstrap JavaScript and JQuery Scripts -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/20a2aa87d8.js" crossorigin="anonymous"></script>
+  <!-- Local CSS StyleSheet -->
+  <link rel="stylesheet" href="css/index-styles.css">
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.2.32.min.js"></script>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="overflow: hidden;">
+    <h2 class="nav-home nav_message" onClick="location.href='index.html'">MB</h2>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav navbar-container" style="float: right;">
+        <li class="nav-item">
+          <a class="nav-label" href='aboutus.html'>about ><span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-label" href='contact.html'>contact ></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-label-log-out"
+            href='https://memoboat.auth.us-east-1.amazoncognito.com/login?client_id=2i1icniabm7pd80vto35rt4guj&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://www.memoboat.tk/student.html'>student
+            ></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-label-log-out"
+            href='https://memoadmin.auth.us-east-1.amazoncognito.com/login?client_id=1q37l1tahdhgpklph8qpsuk7d&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://www.memoboat.tk/admin.html'>admin
+            ></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+</body>
+
+<body class="outer_window">
+  <!-- Title -->
+
+  <div class="row outer_window2">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <h2 class="title" id="MB-title">Memo Boat</h2>
+      <p class="fade-in title-child">a system designed to help YOU stay afloat</p>
+
+      <div class="btn-box">
+        <button type="button" class="btn btn-lg myButton">
+          <h1 class="myButton-Message" onClick="location.href='#learnmore'">Learn More</h1>
+        </button>
+      </div>
+
+      <div class="btn-box">
+        <button type="button" class="btn btn-lg myButton2">
+          <h1 class="myButton-Message"
+            onClick="location.href='https://memoboat.auth.us-east-1.amazoncognito.com/signup?client_id=2i1icniabm7pd80vto35rt4guj&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://www.memoboat.tk/student.html'">
+            Create Account</h1>
+        </button>
+      </div>
+
+      <div class="btn-box">
+        <button type="button" class="btn btn-lg myButton2">
+          <h1 class="myButton-Message"
+            onClick="location.href='https://memoboat.auth.us-east-1.amazoncognito.com/login?client_id=2i1icniabm7pd80vto35rt4guj&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://www.memoboat.tk/student.html'">
+            Sign-in</h1>
+        </button>
+
+      </div>
+      <div class="MemoBoat-container col-lg-12 col-md-6 col-sm-6">
+        <img src="images/Logo.png" id="MemoBoat">
+        <img src="images/shadow2.png" id="MemoBoat-shadow">
+      </div>
+    </div>
+
+  </div>
+</body>
+
+
+<body class="row outer_window">
+  <div class="div-bg">
+    <div class="col-lg-12 col-md-12 col-sm-12" id="learnmore">
+      <img src="images/boat1.png" id="boat1">
+      <img id="checkmark" src="images/checkmark2.png">
+      <p class="message" onclick="myFunction4()"> Create, view, send reports </p>
+      <p class="fade-in learn-more-text" id="myDIV4" style="display: none;">It's important to stay on track,
+        submitting weekly reports helps you do just that!</p>
+    </div>
+  </div>
+
+  <div class="div-bg1">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <div>
+        <img src="images/boat2.png" id="boat2">
+        <img id="checkmark" src="images/checkmark2.png">
+        </div>
+      <h2 class="message" onclick="myFunction3()">Recieve reminders</h2>
+      <p class="fade-in learn-more-text" id="myDIV3" style="display: none;">Receive scheduled weekly reminders to submit that report via MailChimp</p>
+    </div>
+  </div>
+
+  <div class="div-bg">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <div>
+        <img src="images/boat3.png" id="boat3">
+        <img id="checkmark" src="images/checkmark2.png">
+        </div>
+      <h2 class="message" onclick="myFunction2()">Track Progress</h2>
+      <p class="fade-in learn-more-text" id="myDIV2" style="display: none;">Track your group's project progress with our easy to use AWS hosted system!</p>
+    </div>
+  </div>
+
+  <div class="div-bg1">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <div>
+        <img src="images/boat4.png" id="boat4">
+        <img id="checkmark" src="images/checkmark2.png">
+        </div>
+      <h2 class="message" onclick="myFunction1()">Finish That Project</h2>
+      <p class="fade-in learn-more-text" id="myDIV1" style="display: none;">Students are proven more likely to finish their project by using MemoBoat.</p>
+    </div>
+  </div>
+
+  <div class="div-bg">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <h2 class="message" style=" cursor: default;">Sign-Up Now</h2>
+            <p class="learn-more-text">We could all use a little reminder</p>
+            <div class="btn-box">
+              <button type="button" class="btn btn-lg myButton">
+                <h1 class="myButton-Message"
+                onClick="location.href='https://memoboat.auth.us-east-1.amazoncognito.com/signup?client_id=2i1icniabm7pd80vto35rt4guj&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://www.memoboat.tk/student.html'">
+                  Set Sail</h1>
+              </button>
+              <h2 id="copy-right">© Copyright 2020 Memo Boat</h2>
+            </div>
+    </div>
+  </div>
+
+</body>
+
+
+</body>
+
+<script src="javascript/animations.js"></script>
+<script src="javascript/lambda.js"></script>
+
+</html>

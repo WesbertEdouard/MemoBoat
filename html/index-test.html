@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Memo-Boat</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- Local JavaScript  -->
+
+    <!-- Bootstrap CSS StyleSheets -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Bootstrap JavaScript and JQuery Scripts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/20a2aa87d8.js" crossorigin="anonymous"></script>
+    <!-- Local CSS StyleSheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.2.32.min.js"></script>
+</head>
+
+<body>
+     <!-- Navigation Bar -->
+     <div class="nav_top">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+          <h2 class="nav-home nav_message" href="index.html">MB</h2>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav navbar-container">
+              <li class="nav-item active">
+                <p class="nav-label" href="#">Student <span class="sr-only">(current)</span></p>
+              </li>
+              <li class="nav-item">
+                <p class="nav-label-arrow" href="#">></p>
+              </li>
+              <li class="nav-item">
+                <p class="nav-label" href="#">About</p>
+              </li>
+              <li class="nav-item">
+                <p class="nav-label-arrow" href="#">></p>
+              </li>
+              <li class="nav-item">
+                <p class="nav-label" href="#">Contact</p>
+              </li>
+              <li class="nav-item">
+                <p class="nav-label-arrow" href="#">></p>
+              </li>
+              <li class="nav-item">
+                <p class="nav-label-log-out" href="#">Log-out</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+</body>
+  <body class="outer_window">
+      <!-- Title -->
+            <div class="container2">
+              <div class="row">
+                <div class="col-lg-12 col-md-12">
+                  <h2 class="title">Memo Boat</h2>
+                  <p class="fade-in title-child">a system designed to help YOU stay afloat</p>
+                    <button href="#two" type="submit" class="myButton1"><h2 class="Btnmessage">Learn More</h2></button>
+                    <button type="submit" class="myButton2"><h2 class="Btnmessage">Create Account</h2></button>
+                    <button type="submit" class="myButton3"><h2 class="Btnmessage">Sign-in</h2></button>
+                </div>
+                <div class="container">
+                  <img class=" img-checkmark" src="images/Logo.png" style="transform: rotate(-25deg); animation: float 6s ease-in-out infinite; width: 350px; float: right; position: absolute; top: -180px; left: 560px; width: 700px;
+                  height: 500px;">
+                  <img class="img-checkmark" src="images/shadow.png" style="width: 350px;  float: right; position: absolute; top: 180px; left: 740px;">
+                </div>
+              </div>
+            </div>
+</body>
+
+<!-- Call to Action 
+<div class="div-bg-wave"> 
+  <img class="img-waves" src="images/wavesPNG.png">
+</div>
+
+<div class="div-bg-img"> 
+  <img class="img-waves" src="images/wavesPNG.png" >
+</div>
+<div class="div-bg-img"> 
+  <img class="img-bubbles" src="images/bubbles.png">
+</div>
+
+-->
+
+<div class="div-bg "> 
+  <div style="padding-top: 40px;">
+      <img src="images/boat2.png" style=" width: 290px; height: 200px; position: relative; left: 0px; float:left;margin-left: 300px;">
+      <img class="img-checkmark" src="images/checkmark2.png">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <h2 class="message" onclick="myFunction4()"> Create, view, send reports </h2>
+            <p class="fade-in" id="myDIV4" style="display: none;">It's important to stay on track, submitting weekly reports helps you do just that!</p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
+<div class="div-bg1"> 
+  <div style="padding-top: 40px;">
+      <img class="img-boat" src="images/boat3.png">
+      <img class="img-checkmark" src="images/checkmark2.png">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <h2 class="message"  onclick="myFunction3()">Recieve reminders</h2></a>
+            <p class="fade-in" id="myDIV3" style="display: none;">It's important to stay on track, submitting weekly reports helps you do just that!</p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+<div class="div-bg "> 
+  <div style="padding-top: 40px;">
+      <img class="img-boat" src="images/boat4.png">
+      <img class="img-checkmark" src="images/checkmark2.png">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <h2 class="message" onclick="myFunction2()">Track Progress</h2>
+            <p class="fade-in" id="myDIV2" style="display: none;">It's important to stay on track, submitting weekly reports helps you do just that!</p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="div-bg1"> 
+  <div style="padding-top: 40px;">
+      <img class="img-boat" src="images/boat4.png">
+      <img class="img-checkmark" src="images/checkmark2.png">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <h2 class="message" onclick="myFunction1()">Finish That Project</h2>
+            <p class="fade-in" id="myDIV1" style="display: none;">With MemoBoat students are proven to be 5 times more liekly to complete their project</p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="div-bg"> 
+  <div style="padding-top: 40px;">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <h2 style="font-size: 50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic; margin: -10px -10px -10px -10px; padding:30px 0px 20px 0px; position: relative; left: 55px;">Sign-Up Now</h2>
+            <button type="submit" class="myButton"><h2 style="font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic; margin: -10px -10px -10px -10px; padding:0%;">Set Sail</h2></button>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+ 
+<!-- Footer -->
+<script src="javascript/animations.js"></script>
+</html>

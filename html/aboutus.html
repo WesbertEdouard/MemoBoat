@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <style>
+    body {
+      background-image: url('wavesPNG.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+  </style>
+
+  
+    <script>
+
+function openTab(tabName) {
+
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+for (i = 0; i < x.length; i++) {
+ x[i].style.display = "none";
+     }
+
+ document.getElementById(tabName).style.display = "block";
+
+        }
+
+</script> 
+
+  <meta charset="utf-8">
+
+
+
+  <title>Memo-Boat</title>
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+  <!-- Bootstrap CSS StyleSheets -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  <!-- Bootstrap JavaScript and JQuery Scripts -->
+
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+  <!-- Font Awesome -->
+
+  <script src="https://kit.fontawesome.com/20a2aa87d8.js" crossorigin="anonymous"></script>
+
+  <!-- Local CSS StyleSheet -->
+
+  <link rel="stylesheet" href="css/aboutus-styles.css">
+
+
+  <link rel="stylesheet" href="boxes.css">
+
+  <!-- Google Fonts -->
+
+
+
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,900' rel='stylesheet' type='text/css'>
+
+
+
+</head>
+
+
+
+
+
+<body>
+ <!-- Navigation Bar -->
+ <nav class="navbar navbar-expand-lg navbar-light" style="overflow: hidden;">
+  <h2 class="nav-home nav_message" onClick="location.href='index.html'">MB</h2>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav navbar-container" style="float: right;">
+      <li class="nav-item">
+        <a class="nav-label" href='aboutus.html'>about ><span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-label" href='contact.html'>contact ></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-label-log-out"
+          href='https://memoboat.auth.us-east-1.amazoncognito.com/login?client_id=2i1icniabm7pd80vto35rt4guj&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://www.memoboat.tk/student.html'>student
+          ></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-label-log-out"
+          href='https://memoadmin.auth.us-east-1.amazoncognito.com/login?client_id=1q37l1tahdhgpklph8qpsuk7d&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://www.memoboat.tk/admin.html'>admin
+          ></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+</body>
+
+
+
+<body class="outer_window">
+  <!-- Title -->
+
+  <div class="row outer_window2">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <h2 class="title" id="MB-title">About Us</h2>
+    </div>
+    <div class="container">
+  
+  
+      <!-- The grid: three columns/https://www.w3schools.com/howto/howto_css_about_page.asp-->
+<div class="row">
+<div class="column" onclick="openTab('b1');" style="background:indigo;">Front-end</div>
+<div class="column" onclick="openTab('b2');" style="background:purple;">Back-end</div>
+<div class="column" onclick="openTab('b3');" style="background:blueviolet;">Security</div>
+<div class="column" onclick="openTab('b4');" style="background:mediumorchid;">Communications</div>
+<div class="column" onclick="openTab('b5');" style="background:orchid;">Our Mission</div>
+<div class="column" onclick="openTab('b6');" style="background:rgb(122, 50, 122);">Our Passion</div>
+</div>
+
+
+<!-- The expanding grid (hidden by default) -->
+
+<div id="b1" class="containerTab" style="display:none;background:indigo">
+
+<!-- If you want the ability to close the container, add a close button -->
+<span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+<h2>Front-end</h2>
+<p>Wes, our lead Web Developer, is an Information Technology Student at the USF graduating in fall</p>
+<div class="btn-box">
+  <button type="button" class="btn btn-lg myButton">
+    <h1 class="myButton-Message"
+      onClick="location.href='https://www.linkedin.com/in/wesberte/'">
+      Contact Wes</h1>
+  </button>
+</div>
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background:purple">
+<span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+<h2>Back-end</h2>
+<p>Roberto, our cloud engineer is a Cybersecurity Student also at the USF, graduating this fall.</p>
+<div class="btn-box">
+  <button type="button" class="btn btn-lg myButton" style="width: 200px;">
+    <h1 class="myButton-Message"
+      onClick="location.href='https://www.linkedin.com/in/roberto-rodriguez-315a82116/'">
+      Contact Roberto</h1>
+  </button>
+</div>
+</div>
+
+
+<div id="b3" class="containerTab" style="display:none;background:blueviolet">
+<span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+<h2>Security</h2>
+<p>Shawn, our head of Security Operations, is an Information Technology Student at USF graduating this fall.</p>
+<div class="btn-box">
+<button type="button" class="btn btn-lg myButton" style="width: 200px;">
+  <h1 class="myButton-Message"
+    onClick="location.href='https://www.linkedin.com/in/shawn-tomy'">
+    Contact Shawn</h1>
+</button>
+</div>
+</div>
+
+<div id="b4" class="containerTab" style="display:none;background:mediumorchid">
+<span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+<h2>Communications</h2>
+<p>Julian, our Cloud Communication Specialist is a Cybersecurity Student at USF also graduating this fall</p>
+<div class="btn-box">
+<button type="button" class="btn btn-lg myButton" style="width: 200px;">
+  <h1 class="myButton-Message"
+    onClick="location.href='https://www.linkedin.com/in/julian-klutz-b0128085'">
+    Contact Julian</h1>
+</button>
+</div> 
+
+<div id="b5" class="containerTab" style="display:none;background:orchid">
+<span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+<h2>Our Mission</h2>
+<p>We are Seniors at the University of South Florida, with a vision to better the communication between USF students and professors.</p>
+</div> 
+       
+
+<div id="b6" class="containerTab" style="display:block;background:violet">
+<span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+<h2>Our Passion</h2>
+<p>We strive to be the best in what we do. Our goals are to provide services to every SUS in Florida and expand beyond!</p>
+</div>  
+</div>
+</div>
+  </div>
+  <div class="col-lg-12 col-md-12 col-sm-12">
+    <h2 id="copy-right">© Copyright 2020 Memo Boat</h2>
+</div>
+</body>
+
+
+
+ 
+
+</html>       

@@ -1,0 +1,154 @@
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Student Access Page</title>
+    
+
+        <!-- Bootstrap CSS StyleSheets -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      
+        <!-- Bootstrap JavaScript and JQuery Scripts -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles.css">
+        </head>
+        
+        <body>
+            
+            <!-- July 2nd, commenting out to test why its not signin in -->
+            
+          <!-- Navigation Bar -->
+            <div class="nav_top">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+              <h1 class="nav-home" href="index.html">Memo Boat</h1>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                  
+                </ul>
+                <div class="navbar-navbtn">
+                <a class="acc btn btn-light" href="https://memoboat.auth.us-east-1.amazoncognito.com/login?client_id=2i1icniabm7pd80vto35rt4guj&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://www.memoboat.tk/student.html">Log-in</a>
+                <a class="acc btn btn-light" href="https://memoboat.auth.us-east-1.amazoncognito.com/signup?client_id=2i1icniabm7pd80vto35rt4guj&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://www.memoboat.tk/student.html">Create Account</a>
+               </div>
+              </div>
+            </nav>
+          </div>
+        </body>
+          <body class="outer_window">
+              <!-- Title -->
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-5 col-md-6 col-sm-12">
+                    <h1>Memo Boat is a system designed to help YOU stay afloat.</h1>
+                  </div>
+                  <div class="col-lg-1 col-md-1 col-sm-12">
+                  <div class="box">
+                   <img class="title-image" src="Logo.png" alt="">   
+                   </div> 
+                  </div>      
+                </div>
+                <div class="col-lg-12 col-md-6 col-sm-12">
+                  <h2>Create, view, send reports and recieve reminders.</h2>
+                </div>
+              </div>
+        <div class="center_Window">
+          <div class="container-fluid">
+            
+            
+            
+            
+            
+            
+           <!-- Login Form -->
+           <div class="row">
+            <section class="col-lg-8 col-md-10 col-sm-12" id="cta">
+              <a name="loginsection"></a>
+              <form id="signinForm" action="student.html" name="form_input" method="GET">
+                
+                <div class="imgcontainer">
+                  <img src="lock.png" alt="Avatar" class="avatar">
+                  <h2 class="login_text">Login Form</h2>
+                </div>
+                  <div class="container_login">
+  
+                    <label class="login_text" for="uname">Email</label>
+                    <i class="fas fa-user-shield  prefix grey-text"></i>
+                    <input  type="email" class="input_box" id="emailInputSignin" placeholder="Email" required>
+                    <span>
+                    
+                    <label class="login_text" for="password">Password</label>
+                    <i class="fas fa-lock prefix grey-text"></i>  
+                    <input  type="password" class="input_box" id="passwordInputSignin" placeholder="Password" pattern=".*"  required>
+                  </span>
+                  
+                  
+                     
+                      
+                   <button type="submit" class="btn btn-outline-light" value="Sign in">Sign-in</button> 
+                    
+                    
+                    <button class="btn btn-outline-light" onclick="location.href = 'https://www.memoboat.tk/register.html';">Create Acccount</button>
+                    <div>
+                      <p id="error"></p>
+                    </div>
+                  </div>
+
+                
+              </form>
+            </section>
+            </div>
+            
+            
+            
+            
+            
+             <!-- test Login Form --
+            <section class="form-wrap">
+            <h1>Sign In</h1>
+            <form id="signinForm">
+              <input type="email" id="emailInputSignin" placeholder="Email" required>
+              <input type="password" id="passwordInputSignin" placeholder="Password" pattern=".*" required>
+              <input type="submit" value="Sign in">
+            </form>
+        </section>
+                   -->
+        
+        </div>
+        </body>
+        
+        <!-- Call to Action -->
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12">
+              <h2>We could all use a little reminder</h2>
+            </div>
+          </div>
+        </div>
+         
+        <!-- Footer -->
+        <footer id="footer">
+          <i class="fab fa-twitter fa-2x"></i>
+          <i class="fab fa-facebook fa-2x"></i>
+          <i class="fab fa-instagram fa-2x"></i>
+          <i class="fas fa-envelope fa-2x"></i>
+          <p class="copyright">© Copyright 2020 Memo-Boat</p>
+        </footer>
+        
+</html>
+        

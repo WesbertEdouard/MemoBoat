@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Memo-Boat</title>
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <!-- JQuery - required by Boostrap -->
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <!-- Bootstrap CSS StyleSheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Bootstrap JavaScript and JQuery Scripts -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/20a2aa87d8.js" crossorigin="anonymous"></script>
+  <!-- Local CSS StyleSheet -->
+  <link rel="stylesheet" href="css/professor-styles.css">
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.2.32.min.js"></script>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="overflow: hidden;">
+    <h2 class="nav-home nav_message" onClick="location.href='index.html'">MB</h2>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav navbar-container" style="float: right;">
+        <li class="nav-item">
+          <a class="nav-label" href='aboutus.html'>about ><span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-label" href='contact.html'>contact ></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-label-log-out"
+            href='admin.html'>admin
+            ></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+</body>
+
+<body class="outer_window">
+  <h2 class="title">Admin Group Page </h2>
+  <div class="container2">
+    <div class="row">
+      <div class="col-lg-12 col-md-12">
+        <div class="fade-in" id="create-report-table">
+          <form role="form" id="greetingsForm">
+            <div class="form-group fade-in2">
+              <div hidden>
+                <label class="text-left input-label" for="name">Memo Boat Id:</label>
+                <br><br>
+                <input type="text" class="input-box" id="MemoBoatId" data-bind="value: MemoBoatId">
+              </div>
+              <div>
+                <label class="text-left table-header">Group Creation</label><br>
+                <div id="line-break"></div>
+              </div>
+              <div class="text-box">
+                <label class="text-left input-label-group" for="name">Group Name:</label><br>
+                <input type="text" class="input-box" id="name" data-bind="value:  name">
+              </div>
+
+
+              <div class="create-btn-box">
+                <button id="createButton" type="button" class="btn btn-lg myButton">
+                  <h1 class="myButton-Message">Create Group</h1>
+                </button>
+                <button id="checkButton"  type="button" class="btn btn-lg myButton" onclick="verify();">
+                  <h1 class="myButton-Message">Verify Group</h1>
+                </button>
+                <button id="listTablesButton"  type="button" class="btn btn-lg myButton" onclick="listTables();">
+                  <h1 class="myButton-Message">List All Groups</h1>
+                </button>
+                <button id="deleteTableButton"  type="button" class="btn btn-lg myButton" onclick="confirmTableDelete();">
+                  <h1 class="myButton-Message">Delete Group</h1>
+                </button>
+                <button id="next-pageButton"  type="button" class="btn btn-lg myButton" onClick="location.href='admin-view.html'" style="margin-top: 5%;">
+                  <h1 class="myButton-Message">View Reports</h1>
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="move-result">
+      <h1 class="title" id="result"></h1>
+</div>
+
+</body>
+
+</body>
+<footer id="footer">
+  <h2 id="copy-right">© Copyright 2020 Memo Boat</h2>
+</footer>
+<script src="javascript/animations.js"></script>
+<script src="javascript/lambda-admin.js"></script>
+
+</html>

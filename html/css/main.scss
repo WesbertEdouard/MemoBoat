@@ -1,0 +1,461 @@
+/*HTML Styles*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar Styling */
+
+.nav_top {
+    margin: -25px -10px -70px -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navbar {
+    padding: 0 0 4.5rem;
+}
+
+.nav_message {
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    padding: 20px 0px 20px 0px;
+    cursor: pointer;
+}
+
+.nav-home {
+    color: white;
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    padding-left: 30px;
+    position: relative;
+    top: 5px;
+}
+
+.nav-home:hover {
+    color: #1fed86;
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    padding-left: 30px;
+    position: relative;
+    top: 5px;
+}
+
+.navbar-container {
+    position: relative;
+    top: 10px;
+    right: -950px;
+}
+
+.nav-label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: 300;
+    font-size: 36px;
+    font-style: italic;
+    padding-right: 15px;
+}
+
+.nav-label:hover {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 40px;
+    font-style: italic;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.nav-label-log-out {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: 300;
+    font-size: 36px;
+    font-style: italic;
+    padding-right: 15px;
+}
+
+.nav-label-log-out:hover {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ec1a1a;
+    font-weight: 300;
+    font-size: 40px;
+    font-style: italic;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.nav-label-arrow {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: 400;
+    font-size: 30px;
+    padding-right: 10px;
+
+}
+
+
+/* Container Styling */
+
+body {
+    margin: 0;
+}
+
+.outer_window {
+    background-color: #52288C;
+    padding: 3em;
+    grid-gap: 2em;
+
+    
+}
+
+.outer_window2 {
+    text-align: center;
+    background-color: #52288C;
+    position: relative;
+    left: -230px;
+    top: 50px;
+    margin-top: 150px;
+    margin-bottom: 420px;
+}
+
+.div-bg-wave {
+    background: url(bubbles.png);
+    margin: -10px -10px -10px -10px;
+    height: 450px;
+}
+
+.div-bg-img {
+    background: url(bubbles.png);
+    margin: -100px -10px -10px -10px;
+    position: relative;
+    bottom: -53px;
+    height: 300px;
+}
+
+
+.div-bg {
+    background-color: #1D1135;
+    margin: -10px -10px -10px -10px;
+    height: 320px;
+}
+
+.div-bg1 {
+    background-color: #AD77E6;
+    margin: -10px -10px -10px -10px;
+    height: 300px;
+}
+
+.img-checkmark {
+    width: 170px;
+    height: 200px;
+    float: right;
+    margin-right: 300px;
+}
+
+.img-shadow {
+    width: 800px;
+    height: 850px;
+    position: relative;
+    top: 300px;
+    left: 60px;
+    z-index: 1;
+}
+
+
+.img-shadow2 {
+    width: 450px;
+    position: relative;
+    top: 115px;
+    left: 370px;
+    z-index: 1;
+}
+
+.img-boat {
+    width: 250px;
+    height: 160px;
+    position: relative;
+    left: 0px;
+    float: left;
+    margin-left: 300px;
+}
+
+.container {
+    text-align: center;
+    padding: 16px;
+    width: 50%;
+    position: absolute;
+    left: 380px;
+}
+
+.message {
+    width: 500px;
+    color: white;
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    position: relative;
+    left: 150px;
+    top: 40px;
+    padding: 20px 0px 20px 0px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+
+/* Title text & images */
+.title-image {
+    width: 600px;
+    transform: rotate(-25deg);
+    animation: float 6s ease-in-out infinite;
+    position: relative;
+    left: -150px;
+}
+
+.title {
+    color: white;
+    font-size: 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    position: relative;
+    left: 5px;
+    z-index: 100;
+}
+
+#MB-title{
+
+    text-shadow: black 5px -5px;
+}
+
+
+
+.title-child {
+    color: white;
+    font-size: 30px;
+    font-family: 'Agency FB';
+    padding: -30px 0px 50px 0px;
+    position: relative;
+    z-index: 100;
+}
+
+.learn-more-text {
+    font-family: 'Agency FB';
+    color: white;
+    position: relative;
+    font-size: 25px;
+    font-weight: 500;
+    bottom: -30px;
+    left: 50px;
+}
+
+.learn-more-text2 {
+    font-family: 'Agency FB';
+    color: white;
+    position: relative;
+    font-size: 30px;
+    font-weight: 500;
+    font-style: italic;
+    bottom: -30px;
+    left: 50px;
+}
+
+.title-shadow {
+    text-align: center;
+    padding: 16px;
+    position: absolute;
+    left: 100px;
+    bottom: 315px;
+}
+
+.title-shadow2 {
+    text-align: center;
+    padding: 16px;
+    position: absolute;
+    left: 100px;
+    bottom: 200px;
+}
+
+#shadow {
+    width: 300px;
+}
+
+#shadow2 {
+    width: 300px;
+}
+
+
+#footer {
+    text-align: center;
+    padding-top: 10%;
+    padding-right: 7%;
+    padding-left: 7%;
+    margin-top: -200px;
+    position: absolute;
+    left: 550px;
+}
+
+#copy-right {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 1.5;
+    color: white;
+    position: relative;
+    bottom: -230px;
+    left: 0px;
+    margin-top: -150px;
+
+}
+
+
+/*Buttons Styling */
+
+.myButton {
+    background-color: #591FED;
+    position: absolute;
+    left: 50px;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.myButton:hover {
+    background-color: #1fed86;
+}
+
+.myButton2 {
+    background-color: #1D1135;
+    position: absolute;
+    left: 50px;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.myButton2:hover {
+    background-color: #1fed86;
+}
+
+.myButton-Message {
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    margin: -10px -10px -10px -10px;
+    padding: 0%;
+    color: white;
+    position: relative;
+    bottom: 2px;
+}
+
+.btn-box-1 {
+    position: absolute;
+    bottom: -10px;
+    left: 500px;
+    z-index: 100;
+}
+
+.btn-box-2 {
+    position: absolute;
+    bottom: -10px;
+    left: 670px;
+    z-index: 100;
+}
+
+.btn-box-3 {
+    position: absolute;
+    bottom: -10px;
+    left: 840px;
+    z-index: 100;
+}
+
+.btn-box-4 {
+    position: absolute;
+    bottom: -50px;
+    left: 300px;
+    z-index: 100;
+}
+
+
+/*Logo Animation Properties*/
+@keyframes float {
+    0% {
+
+        transform: translatey(0px);
+    }
+
+    50% {
+
+        transform: translatey(-20px);
+    }
+
+    100% {
+
+        transform: translatey(0px);
+    }
+}
+
+.fade-in {
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

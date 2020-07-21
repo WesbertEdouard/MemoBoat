@@ -1,0 +1,97 @@
+<html lang="en">
+  <head>
+    <title>Invoking Lambda Function</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- JQuery - required by Boostrap -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.2.32.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h2>AWS Lambda in Action</h2>
+        <h1>Greetings on Demand</h1>z
+        <p>This is an example of calling an AWS Lambda function
+          from a web page via JavaScript.</p>
+        <p>Instead of a static "Hello World" sample, here you can provide
+            a name, and you will receive your greetings.</p>
+        <p>Try without a name, too.</p>
+      </div>
+      <form role="form" id="greetingsForm">
+        <div class="form-group">
+          
+          <!---<label>WARNING: Group Name cannot contain spaces or special symbols! If space is require please use underscore</label><br>
+          <label>For example:</label><br> 
+          <label>Marvel Avengers is NOT VALID</label><br>
+          <label>Marvel_Avengers is VALID</label> 
+          <input style='width: 50%;' type="text" class="form-control" id="name"> --->
+          <table class="table">
+            <tbody>
+            
+            <tr>
+            <td class="text-left" hidden><label for="name">Memo Boat Id:</label><br><br> <input style='width: 50%;' type="text" class="form-control" id="MemoBoatId" data-bind="value: MemoBoatId">
+                <span style='color: rgb(0, 255, 0); font-weight: bold;' data-bind='text : SuccessMessage'></span>
+            </td>
+            </tr>
+
+            <tr>
+            <td class="text-left"><label for="name">Group Name:</label><br><br> <input style='width: 50%;' type="text" class="form-control" id="name" data-bind="value: name" required>
+                <span style='color: rgb(0, 255, 0); font-weight: bold;' data-bind='text : SuccessMessage'></span>
+            </td>
+            </tr>
+
+            <tr>
+              <td class="text-left"><label>First Name</label><br><input type="text" class="form-control" style='width: 50%;' id="FirstName" data-bind="value: FirstName" required/>
+                <span style='color: rgb(0, 255, 0); font-weight: bold;' data-bind='text : SuccessMessage'></span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td class="text-left"><label>Last Name</label><br><input type="text" class="form-control" style='width: 50%;' id="LastName" data-bind="value: LastName" required/>
+                <span style='color: rgb(0, 255, 0); font-weight: bold;' data-bind='text : SuccessMessage'></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-left"><label>Role</label><br><input type="text" class="form-control" style='width: 50%;' id="Role" data-bind="value: Role" required/>
+                <span style='color: rgb(0, 255, 0); font-weight: bold;' data-bind='text : SuccessMessage'></span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td class="text-left"><label>Date</label><br><input type="text" class="form-control" style='width: 50%;' id="Dates" data-bind="value: Dates" required/>
+                <span style='color: rgb(0, 255, 0); font-weight: bold;' data-bind='text : SuccessMessage'></span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td class="text-left"><label>Report</label><br><textarea type="text" class="form-control" style='width: 50%;' id="Report" data-bind="value: Report" rows="4" cols="50" required></textarea>
+              <br>
+                <span style='color: rgb(0, 255, 0); font-weight: bold;' data-bind='text : SuccessMessage'></span>
+              </td>
+            </tr>
+          
+            </tbody>
+          </table>
+        </div>
+        <button type="submit" class="btn btn-default" id="createButton">Create Group</button>
+        <button type="submit" class="btn btn-default" id="checkButton">Verify Group</button>
+        <button type="submit" class="btn btn-default" id="viewReportsButton">View Reports</button>
+        <button type="submit" class="btn btn-default" id="addReportButton">Add Report</button>
+        <button type="submit" class="btn btn-default" id="listTablesButton">List All Groups</button>
+        <button type="submit" class="btn btn-default" id="deleteTableButton">Delete Group</button>
+        
+      </form>
+      <div>
+          <div id="result"></div>
+          <div id="tableresult"></div>
+      </div>
+    </div>
+    <!-- This is where AWS Lambda is invoked -->
+    <script src="javascript/test.js"></script>
+  </body>
+</html>
